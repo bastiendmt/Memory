@@ -1,3 +1,13 @@
+# Projet
+
+This project is a memory game. The goal is to find pairs by clicking on cards
+
+
+## Preview
+![Memory](/preview/memory.png)
+
+## About
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
