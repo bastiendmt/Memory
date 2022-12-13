@@ -1,24 +1,22 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-
-import './HighScoreInput.css'
-
-import { saveHOFEntry } from './HallOfFame'
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { saveHOFEntry } from './HallOfFame';
+import './HighScoreInput.css';
 
 class HighScoreInput extends Component {
-  state = { winner: '' }
+  state = { winner: '' };
 
   // Arrow fx for binding
-  handleWinnerUpdate = event => {
-    this.setState({ winner: event.target.value.toUpperCase() })
-  }
+  handleWinnerUpdate = (event) => {
+    this.setState({ winner: event.target.value.toUpperCase() });
+  };
 
   // Arrow fx for binding
-  persistWinner = event => {
-    event.preventDefault()
-    const newEntry = { guesses: this.props.guesses, player: this.state.winner }
-    saveHOFEntry(newEntry, this.props.onStored)
-  }
+  persistWinner = (event) => {
+    event.preventDefault();
+    const newEntry = { guesses: this.props.guesses, player: this.state.winner };
+    saveHOFEntry(newEntry, this.props.onStored);
+  };
 
   render() {
     return (
@@ -36,13 +34,13 @@ class HighScoreInput extends Component {
           <button type="submit">J’ai gagné !</button>
         </p>
       </form>
-    )
+    );
   }
 }
 
 HighScoreInput.propTypes = {
   guesses: PropTypes.number.isRequired,
   onStored: PropTypes.func.isRequired,
-}
+};
 
-export default HighScoreInput
+export default HighScoreInput;

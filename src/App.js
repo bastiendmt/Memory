@@ -1,15 +1,13 @@
-import React, { Component } from "react";
-import shuffle from "lodash.shuffle";
-
-import "./App.css";
-
-import Card from "./Card";
-import GuessCount from "./GuessCount";
-import HallOfFame from "./HallOfFame";
-import HighScoreInput from "./HighScoreInput";
+import shuffle from 'lodash.shuffle';
+import React, { Component } from 'react';
+import './App.css';
+import Card from './Card';
+import GuessCount from './GuessCount';
+import HallOfFame from './HallOfFame';
+import HighScoreInput from './HighScoreInput';
 
 const SIDE = 6;
-export const SYMBOLS = "😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿";
+export const SYMBOLS = '😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿';
 const VISUAL_PAUSE_MSECS = 750;
 
 class App extends Component {
@@ -42,14 +40,14 @@ class App extends Component {
     const indexMatched = matchedCardIndices.includes(index);
 
     if (currentPair.length < 2) {
-      return indexMatched || index === currentPair[0] ? "visible" : "hidden";
+      return indexMatched || index === currentPair[0] ? 'visible' : 'hidden';
     }
 
     if (currentPair.includes(index)) {
-      return indexMatched ? "justMatched" : "justMismatched";
+      return indexMatched ? 'justMatched' : 'justMismatched';
     }
 
-    return indexMatched ? "visible" : "hidden";
+    return indexMatched ? 'visible' : 'hidden';
   }
 
   // Arrow fx for binding
